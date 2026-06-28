@@ -4,10 +4,24 @@ A premium and robust Android application designed for a digital banking platform
 
 ---
 
-## 📸 Sample Mockup
-The application has been styled to match the required dashboard design:
-* **Explore Screen**: A tabbed overview showing "PENDING" and "VERIFIED" KYC customers with a real-time search bar.
-* **Details Screen**: Detailed customer profile, masked account numbers, formatted currency balances, resolved bank branches, and selfie upload.
+## 📸 Visual Walkthrough & Screenshots
+
+### 1. Explore Screen (Pending KYC & Search)
+![Explore Screen - Pending](mockups/Screenshot_20260628_121139.jpg)
+
+### 2. Explore Screen (Verified KYC)
+![Explore Screen - Verified](mockups/Screenshot_20260628_121147.jpg)
+
+### 3. In-App CameraX Selfie Capture
+![CameraX Selfie](mockups/Screenshot_20260628_121158.jpg)
+
+### 4. Account Details Screen (Verified KYC)
+![Account Details - Verified](mockups/Screenshot_20260628_121217.jpg)
+
+### 🎬 Full Walkthrough Demo
+![Walkthrough video](mockups/video.gif)
+
+
 
 ---
 
