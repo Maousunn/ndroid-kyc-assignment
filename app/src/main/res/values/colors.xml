@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Theme Colors -->
+    <color name="primary">#2F54EB</color>
+    <color name="primary_light">#E6F4FF</color>
+    <color name="accent_verified">#10B981</color>
+    <color name="accent_verified_light">#D1FAE5</color>
+    <color name="accent_pending">#F59E0B</color>
+    <color name="accent_pending_light">#FEF3C7</color>
+
+    <!-- Light Mode Backgrounds & Texts -->
+    <color name="background_light">#F8FAFC</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="text_primary_light">#0F172A</color>
+    <color name="text_secondary_light">#64748B</color>
+    <color name="border_light">#E2E8F0</color>
+
+    <!-- Dark Mode Backgrounds & Texts -->
+    <color name="background_dark">#0B0F19</color>
+    <color name="surface_dark">#151B2C</color>
+    <color name="text_primary_dark">#F1F5F9</color>
+    <color name="text_secondary_dark">#94A3B8</color>
+    <color name="border_dark">#1E293B</color>
+
+    <color name="shimmer_base">#E2E8F0</color>
+    <color name="shimmer_highlight">#F1F5F9</color>
+</resources>

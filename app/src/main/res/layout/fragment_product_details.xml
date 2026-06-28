@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:fillViewport="true"
+    android:paddingTop="32dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- Toolbar Back Button -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            android:contentDescription="Back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Details"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary_light"
+            app:layout_constraintBottom_toBottomOf="@id/back_button"
+            app:layout_constraintStart_toEndOf="@id/back_button"
+            app:layout_constraintTop_toTopOf="@id/back_button" />
+
+        <!-- Profile Header Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/header_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/surface_light"
+            app:layout_constraintTop_toBottomOf="@id/back_button">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/detail_avatar"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Circle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/detail_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary_light"
+                    app:layout_constraintEnd_toStartOf="@id/detail_balance"
+                    app:layout_constraintStart_toEndOf="@id/detail_avatar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="RAHUL SHARMA" />
+
+                <TextView
+                    android:id="@+id/detail_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary_light"
+                    app:layout_constraintStart_toEndOf="@id/detail_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/detail_name"
+                    tools:text="A/C **** 3421" />
+
+                <TextView
+                    android:id="@+id/detail_status_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/detail_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/detail_account"
+                    tools:text="KYC VERIFIED"
+                    tools:textColor="@color/accent_verified"
+                    tools:background="@drawable/bg_badge_verified" />
+
+                <!-- Balance details -->
+                <TextView
+                    android:id="@+id/detail_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Rs 84,200" />
+
+                <TextView
+                    android:id="@+id/detail_account_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Savings A/C"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/detail_balance" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- KYC Profile Details Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/details_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/surface_light"
+            app:layout_constraintTop_toBottomOf="@id/header_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KYC PROFILE"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- DOB -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date of Birth"
+                        android:textColor="@color/text_secondary_light" />
+                    <TextView
+                        android:id="@+id/profile_dob"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/text_primary_light"
+                        android:textStyle="bold"
+                        tools:text="12 Apr 1996" />
+                </RelativeLayout>
+
+                <!-- Nationality -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nationality"
+                        android:textColor="@color/text_secondary_light" />
+                    <TextView
+                        android:id="@+id/profile_nationality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/text_primary_light"
+                        android:textStyle="bold"
+                        tools:text="India (IN)" />
+                </RelativeLayout>
+
+                <!-- Contact -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact"
+                        android:textColor="@color/text_secondary_light" />
+                    <TextView
+                        android:id="@+id/profile_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/text_primary_light"
+                        android:textStyle="bold"
+                        tools:text="+91 9876543210" />
+                </RelativeLayout>
+
+                <!-- Address -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textColor="@color/text_secondary_light" />
+                    <TextView
+                        android:id="@+id/profile_address"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:textColor="@color/text_primary_light"
+                        android:textStyle="bold"
+                        tools:text="123 Main St, New Delhi" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/border_light"
+                    android:layout_marginVertical="12dp" />
+
+                <!-- IFSC -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IFSC Code"
+                        android:textColor="@color/text_secondary_light" />
+                    <TextView
+                        android:id="@+id/profile_ifsc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/text_primary_light"
+                        android:textStyle="bold"
+                        tools:text="HDFC0CAGSBK" />
+                </RelativeLayout>
+
+                <!-- Bank / Branch -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bank / Branch"
+                        android:textColor="@color/text_secondary_light" />
+                    <TextView
+                        android:id="@+id/profile_bank_branch"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="end"
+                        android:textColor="@color/text_primary_light"
+                        android:textStyle="bold"
+                        tools:text="HDFC Bank, Andheri Branch" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- KYC Selfie Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/selfie_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/surface_light"
+            app:layout_constraintTop_toBottomOf="@id/details_card">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/selfie_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KYC SELFIE"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Selfie Frame -->
+                <FrameLayout
+                    android:id="@+id/selfie_frame"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_selfie_placeholder">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/selfie_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:padding="4dp"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Circle"
+                        tools:src="@tools:sample/avatars" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/selfie_status_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selfie captured via in-app camera (CameraX)"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_secondary_light"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <!-- Primary KYC Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/action_kyc_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Do KYC"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12dp"
+                    android:paddingVertical="12dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
